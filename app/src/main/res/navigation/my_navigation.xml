@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/pagerFragment2">
+    <fragment
+        android:id="@+id/pagerFragment2"
+        android:name="com.example.chatapp.PagerFragment"
+        android:label="fragment_pager"
+        tools:layout="@layout/fragment_pager" >
+        <action
+            android:id="@+id/action_pagerFragment2_to_windowFragment"
+            app:destination="@id/windowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/windowFragment"
+        android:name="com.example.chatapp.WindowFragment"
+        android:label="fragment_window"
+        tools:layout="@layout/fragment_window" >
+        <action
+            android:id="@+id/action_windowFragment_to_userMessage"
+            app:destination="@id/userMessage" />
+        <action
+            android:id="@+id/action_windowFragment_to_guruhMessage"
+            app:destination="@id/guruhMessage" />
+    </fragment>
+    <fragment
+        android:id="@+id/userMessage"
+        android:name="com.example.chatapp.UserMessage"
+        android:label="fragment_user_message"
+        tools:layout="@layout/fragment_user_message" />
+    <fragment
+        android:id="@+id/guruhMessage"
+        android:name="com.example.chatapp.GuruhMessage"
+        android:label="GuruhMessage" />
+</navigation>
